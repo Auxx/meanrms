@@ -84,6 +84,19 @@ table {
     border-radius: 5px;
 }
 
+.usage {
+    width: 52%;
+    float: left;
+    background-color: #F0F0F0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+
+.usage li {
+    font-size: 90%;
+}
+
 section {
     overflow: hidden;
 }
@@ -181,6 +194,36 @@ p {
             <a href="http://www.e-cigarette-forum.com/forum/new-members-forum/623461-eleaf-istick-easy-mean-rms-conversion-formulas.html">ECF forum</a>.
             It is also <a href="https://github.com/Auxx/meanrms">open-sourced</a>
             under simple BSD licence.
+        </p>
+    </div>
+
+    <div class="usage">
+        <h3>Usage</h3>
+        <ul>
+            <li>
+                First thing you should do is determine the highest voltage at which
+                your mod will fire. For example, iStick fires at 5.5V. Put that
+                value in Vmax input field.
+            </li>
+            <li>
+                If you want to get correct power output values, put your coil
+                resistance in the input field.
+            </li>
+            <li>
+                Now you can put voltage or watts which your device shows in mean
+                mode in fields Vmean (Volts) or Wmean (Watts) and you will see
+                correct voltage and power in Vrms and Wrms fields.
+            </li>
+            <li>
+                You can also put desired power and voltage in RMS input fields,
+                and calculator will provide you the values you should set your
+                mod to to fire at desired power.
+            </li>
+        </ul>
+        <p>
+            The results were checked against
+            <a href="https://www.youtube.com/watch?v=_W1G7p_fCJw">Phil Busardo's measurements</a>
+            and were found to be correct.
         </p>
     </div>
 
