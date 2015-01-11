@@ -1,16 +1,185 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<head>
+<title>Mean to RMS converter</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="http://code.jquery.com/jquery-2.1.1.min.js" defer="defer"></script>
+<script src="script.js" defer="defer"></script>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-color: #FFF;
+    color: #333;
+}
+
+* {
+    font-family: 'segoe ui', sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #7070ff;
+    color: #FFF;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 140%;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 80%;
+    font-weight: normal;
+}
+
+h3 {
+    margin: 0;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+input {
+    width: 70px;
+    text-align: right;
+    font-size: 100%;
+}
+
+th {
+    text-align: right;
+    padding-right: 10px;
+    font-weight: normal;
+}
+
+.separator {
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+section {
+    max-width: 800px;
+    padding: 10px;
+    margin: auto;
+}
+
+table {
+    float: left;
+    margin-right: 20px;
+    width: 25%;
+}
+
+.info {
+    width: 40%;
+    float: right;
+    background-color: #F0F0F0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+section {
+    overflow: hidden;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    padding: 30px 0;
+    background-color: #7070ff;
+    color: #FFF;
+    font-size: 80%;
+}
+
+footer a {
+    color: #adf;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Mean &laquo;&raquo; RMS</h1>
+    <h2>Mean to RMS and RMS to Mean converter</h2>
+</header>
+
+<section>
+
+    <table>
+        <tbody>
+            <tr>
+                <td colspan="2" class="separator">Voltage</td>
+            </tr>
+            <tr>
+                <th>Vmax</th>
+                <td><input name="vmax" type="number" step="0.1" required value="5.5"></td>
+            </tr>
+            <tr>
+                <th>Vmean</th>
+                <td><input name="vmean" type="number" step="0.1"></td>
+            </tr>
+            <tr>
+                <th>Vrms</th>
+                <td><input name="vrms" type="number" step="0.1"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <tbody>
+            <tr>
+                <td colspan="2" class="separator">Power output</td>
+            </tr>
+            <tr>
+                <th>Resistance</th>
+                <td><input name="res" type="number" step="0.1" required value="1"></td>
+            </tr>
+            <tr>
+                <th>Wmean</th>
+                <td><input name="wmean" type="number" step="0.1"></td>
+            </tr>
+            <tr>
+                <th>Wrms</th>
+                <td><input name="wrms" type="number" step="0.1"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="info">
+        <h3>WTF is all that?</h3>
+        <p>
+            Well, the proper description is coming soon. As of right now I hope
+            you already know what the hell RMS and Mean voltages are.
+        </p>
+    </div>
+
+</section>
+
+<footer>
+    &copy; Aleksandr 'Aux' Ivanov
+    <br>
+    reddit: <a href="http://www.reddit.com/user/Auxx/">Auxx</a>
+    <br>
+    lepra: <a href="https://leprosorium.ru/users/Aux">Aux</a>
+    <br>
+    e-mail: <a href="mailto:aux@hexmode.org">aux@hexmode.org</a>
+</footer>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-15151126-3', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</body>
 </html>
