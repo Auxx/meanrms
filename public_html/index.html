@@ -100,6 +100,10 @@ footer {
 footer a {
     color: #adf;
 }
+
+p {
+    font-size: 90%;
+}
 </style>
 </head>
 <body>
@@ -154,8 +158,29 @@ footer a {
     <div class="info">
         <h3>WTF is all that?</h3>
         <p>
-            Well, the proper description is coming soon. As of right now I hope
-            you already know what the hell RMS and Mean voltages are.
+            Many regulated mods downscale the voltage using PWM &mdash;
+            a <a href="http://en.wikipedia.org/wiki/Pulse-width_modulation" title="Pulse-width modulation">pulse-width modulation</a>
+            method. In short that means that the mod always fires at its maximum
+            voltage, but does that in small pulses. Inert systems like heating
+            coils react to pulses like the voltage is lower than maximum and
+            the resulting voltage depends on pulse length.
+        </p>
+        <p>
+            There are two ways of calculating the resulting voltage for PWM mods:
+            <a href="http://en.wikipedia.org/wiki/Generalized_mean">mean</a> and
+            <a href="http://en.wikipedia.org/wiki/Root_mean_square">RMS</a>
+            (which is actually a special case of mean function). Mods which
+            calculate their power output in RMS fire the same power as they
+            would in flat DC signal mode, but mods which fire in mean mode always
+            produce more power.
+        </p>
+        <p>
+            This calculator let's you easily convert mean to RMS values and back
+            using the formulas provided by
+            <a href="http://www.e-cigarette-forum.com/forum/members/234649/donf99.html">donf99</a> from
+            <a href="http://www.e-cigarette-forum.com/forum/new-members-forum/623461-eleaf-istick-easy-mean-rms-conversion-formulas.html">ECF forum</a>.
+            It is also <a href="https://github.com/Auxx/meanrms">open-sourced</a>
+            under simple BSD licence.
         </p>
     </div>
 
